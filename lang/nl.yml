@@ -1,0 +1,25 @@
+nl:
+  TheWebmen\FAQ\Pages\FAQPage:
+    PLURALNAME: 'FAQ paginas'
+    PLURALS:
+      one: 'Een FAQ pagina'
+      other: '{count} FAQ paginas'
+    SINGULARNAME: 'FAQ pagina'
+    CATEGORIES: 'Categorieen'
+  TheWebmen\FAQ\Model\FAQCategorie:
+    PLURALNAME: 'Categorieen'
+    PLURALS:
+      one: 'Een categorie'
+      other: '{count} categorieen'
+    SINGULARNAME: 'Categorie'
+    NUMBER_OF_QUESTIONS: 'Aantal vragen'
+    QUESTIONS: 'Vragen'
+    db_Title: 'Titel'
+  TheWebmen\FAQ\Model\FAQQuestion:
+    PLURALNAME: 'Vragen'
+    PLURALS:
+      one: 'Een vraag'
+      other: '{count} vragen'
+    SINGULARNAME: 'Vragen'
+    db_Question: 'Vraag'
+    db_Answer: 'Antwoord'

@@ -1,0 +1,25 @@
+en:
+  TheWebmen\FAQ\Pages\FAQPage:
+    PLURALNAME: 'FAQ pages'
+    PLURALS:
+      one: 'A FAQ page'
+      other: '{count} FAQ pages'
+    SINGULARNAME: 'FAQ page'
+    CATEGORIES: 'Categories'
+  TheWebmen\FAQ\Model\FAQCategorie:
+    PLURALNAME: 'Categories'
+    PLURALS:
+      one: 'A category'
+      other: '{count} categories'
+    SINGULARNAME: 'Category'
+    NUMBER_OF_QUESTIONS: 'Number of questions'
+    QUESTIONS: 'Questions'
+    db_Title: 'Title'
+  TheWebmen\FAQ\Model\FAQQuestion:
+    PLURALNAME: 'Questions'
+    PLURALS:
+      one: 'A question'
+      other: '{count} questions'
+    SINGULARNAME: 'Question'
+    db_Question: 'Question'
+    db_Answer: 'Answer'
