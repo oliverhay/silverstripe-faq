@@ -9,6 +9,8 @@ use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 
 class FAQPage extends \Page {
 
+    private static $table_name = 'TheWebmen_FAQPage';
+
     private static $has_many = [
         'Categories' => FAQCategorie::class
     ];

@@ -10,6 +10,8 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 class FAQCategorie extends DataObject {
 
+    private static $table_name = 'TheWebmen_FAQCategorie';
+
     private static $singular_name = 'Categorie';
     private static $plural_name = 'Categories';
 

@@ -6,6 +6,8 @@ use SilverStripe\ORM\DataObject;
 
 class FAQQuestion extends DataObject {
 
+    private static $table_name = 'TheWebmen_FAQQuestion';
+
     private static $singular_name = 'Question';
     private static $plural_name = 'Questions';
 
