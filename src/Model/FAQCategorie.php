@@ -12,7 +12,7 @@ class FAQCategorie extends DataObject {
 
     private static $table_name = 'TheWebmen_FAQCategorie';
 
-    private static $singular_name = 'Categorie';
+    private static $singular_name = 'Category';
     private static $plural_name = 'Categories';
 
     private static $db = [
@@ -29,9 +29,9 @@ class FAQCategorie extends DataObject {
     ];
 
     private static $summary_fields = [
-        'Title',
-        'Questions.Count',
-        'Created'
+        'Title' => 'Category',
+        'Questions.Count' => 'No. Questions',
+        'Created.Nice' => 'Created' 
     ];
 
     private static $default_sort = 'Sort';
