@@ -2,6 +2,7 @@
 
 namespace TheWebmen\FAQ\Model;
 
+use SilverStripe\Core\Config\Config;
 use SilverStripe\ORM\DataObject;
 use TheWebmen\FAQ\Pages\FAQPage;
 use SilverStripe\Forms\GridField\GridField;
@@ -9,6 +10,11 @@ use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 class FAQCategorie extends DataObject {
+
+    /**
+     * @config
+     */
+    private static $itemsPerPage = 15;
 
     private static $table_name = 'TheWebmen_FAQCategorie';
 
@@ -31,7 +37,7 @@ class FAQCategorie extends DataObject {
     private static $summary_fields = [
         'Title' => 'Category',
         'Questions.Count' => 'No. Questions',
-        'Created.Nice' => 'Created' 
+        'Created.Nice' => 'Created'
     ];
 
     private static $default_sort = 'Sort';
@@ -51,7 +57,7 @@ class FAQCategorie extends DataObject {
         $fields->removeByName('Questions');
         $fields->removeByName('Sort');
 
-        $gridConfig = GridFieldConfig_RecordEditor::create();
+        $gridConfig = GridFieldConfig_RecordEditor::create(Config::inst()->get(self::class, 'itemsPerPage'));
         $gridConfig->addComponent(new GridFieldOrderableRows());
         $fields->addFieldToTab('Root.Main', new GridField('Questions', _t(self::class . '.QUESTIONS', 'Questions'), $this->Questions(), $gridConfig));
 
