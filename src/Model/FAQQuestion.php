@@ -4,6 +4,7 @@ namespace TheWebmen\FAQ\Model;
 
 use SilverStripe\ORM\DataObject;
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\TextAreaField;
 
 class FAQQuestion extends DataObject {
 
@@ -37,6 +38,10 @@ class FAQQuestion extends DataObject {
         $fields->removeByName('Sort');
         $fields->removeByName('CategoryID');
         $fields->removeByName('PageID');
+        
+        $fields->addFieldToTab('Root.Main',
+	            $Summary = new TextAreaField('Answer', "Answer"), 'Answer'
+	        );
 
         return $fields;
     }
